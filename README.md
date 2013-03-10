@@ -1,4 +1,4 @@
-amicron
+omicron
 =======
 
-amicron
+TYPO3 CMS Skin Integration
