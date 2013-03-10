@@ -1,0 +1,11 @@
+# target="_blank" sucks
+styles.content.links {
+  extTarget = 
+  target =
+}
+
+# enable the lightbox-rendering - nobody wants sth. different
+styles.content.imgtext.linkWrap.lightboxEnabled = 1
+
+# labels for filedownloads
+styles.content.uploads.filesizeBytesLabels = " | kB| MB| GB"
