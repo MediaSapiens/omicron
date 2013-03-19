@@ -177,5 +177,6 @@ lib.copyright{
 lib.contact = TEXT
 lib.contact.value = {$site.contact}
 
+#id={$site.rootOfPage}&
 lib.logo = TEXT
-lib.logo.value = <a class="brand" href="./?id={$site.rootOfPage}&L={$config.sys_language_uid}">{$site.copyright}</a>
+lib.logo.value = <a class="brand" href="./?L={$config.sys_language_uid}">{$site.copyright}</a>

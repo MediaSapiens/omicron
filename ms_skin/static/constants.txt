@@ -61,9 +61,9 @@ config{
 [global]
 
 site{
-	rootOfPage = 1
-	storagePid = 2
-	footerNavi = 10
+	rootOfPage = 2
+	storagePid = 3
+	footerNavi = 4
 	copyright = Omicron
 	contact = 040 / 09009998
 
