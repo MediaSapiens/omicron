@@ -139,6 +139,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 CMS_TEMPLATES = (
     ('index.htm', 'Template Index'),
     ('textpage.htm', 'Template Textpage'),
+    ('downloads.htm', 'Template Download'),
 )
 
 ROOT_URLCONF = 'django_cms_site.urls'

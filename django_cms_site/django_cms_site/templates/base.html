@@ -4,6 +4,7 @@
 <html>
   <head>
   	<meta charset="utf-8"/>
+	<title>{{ title }}</title>
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel='stylesheet' type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic'>
 	<link rel="stylesheet" href="{{ STATIC_URL }}public/styles/bootstrap.min.css">
@@ -31,11 +32,11 @@
 		<div class="container">
 			<div class="navbar">
 				<div class="navbar-inner">
-					<a class="brand" href="#">Title</a>
+					<a class="brand" href="/">Omicron</a>
 					<a href="#" data-target=".nav-collapse" data-toggle="collapse" class="btn-menu collapsed"><span class="link">Menu <i class="icon-chevron"></i></span></a>
 					<div class="nav-collapse collapse">
 						<ul class="nav u-mainmenu">
-					      {% show_menu 0 100 100 100 %}
+							{% show_menu_below_id "main" 0 100 100 100 %}
 						</ul>
 					</div><!-- / nav-collapse -->
 					<div class="pull-right">
@@ -59,10 +60,8 @@
 		</div>
 	</section><!-- / b-pagetitle -->
 
-{% block slider %}
-{% endblock slider %}
-{% block section_content %}
-{% endblock section_content %}
+{% block slider %}{% endblock slider %}
+{% block section_content %}{% endblock section_content %}
 
 	<div class="l-footerpush"></div>
 </div><!--/ .l-wrapper -->
@@ -74,9 +73,7 @@
 	<div class="container">
 		<div class="pull-left">
 			<ul class="nav u-footermenu">
-				<li><a href="#">Support</a></li>
-				<li><a href="#">Impressum</a></li>
-				<li><a href="#">Something useful</a></li>
+				{% show_menu_below_id "footer" 0 100 100 100 "menu/footer_menu.html" %}
 			</ul>
 		</div>
 		<div class="pull-right">
