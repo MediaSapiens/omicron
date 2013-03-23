@@ -1,0 +1,9 @@
+{% load cms_tags sekizai_tags %}
+<li>
+    <img src="{{ slide.image.url }}" alt="" />
+    <div class="caption">
+        <h3>{{ slide.title }}</h3>
+        <p>{{ slide.text }}</p>
+        <a href="{% page_url slide.page.pk %}" class="golink">{{ slide.link_text }}</a>
+    </div>
+</li>

@@ -142,6 +142,30 @@ CMS_TEMPLATES = (
     ('downloads.htm', 'Template Download'),
 )
 
+CMS_PLACEHOLDER_CONF = {
+
+    'text_page_left': {
+        "plugins": ('TextPlugin', 'PicturePlugin', 'LinkPlugin'),
+        'name': gettext("Content"),
+    },
+    'text_page_content': {
+        "plugins": ('TextPlugin', 'PicturePlugin', 'LinkPlugin'),
+        'name': gettext("Content"),
+    },
+
+    'pagetitle': {
+        "plugins": ('TextPlugin', ),
+        'name': gettext("Content"),
+    },
+
+    'slider': {
+        'plugins': ('CMSSliderPlugin', ),
+        'name': u'Slider'
+    },
+
+}
+
+
 ROOT_URLCONF = 'django_cms_site.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
@@ -181,7 +205,7 @@ INSTALLED_APPS = (
     # 'cms.plugins.video'
     # 'cms.plugins.twitter'
 
-    # 'django_cms_site.apps.slider',
+    'django_cms_site.apps.slider',
 
 )
 
