@@ -146,16 +146,16 @@ CMS_PLACEHOLDER_CONF = {
 
     'text_page_left': {
         "plugins": ('TextPlugin', 'PicturePlugin', 'LinkPlugin'),
-        'name': gettext("Content"),
+        'name': gettext("Left column"),
     },
     'text_page_content': {
         "plugins": ('TextPlugin', 'PicturePlugin', 'LinkPlugin'),
-        'name': gettext("Content"),
+        'name': gettext("Base content"),
     },
 
     'pagetitle': {
         "plugins": ('TextPlugin', ),
-        'name': gettext("Content"),
+        'name': gettext("Page title"),
     },
 
     'slider': {
