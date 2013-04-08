@@ -48,8 +48,8 @@ LANGUAGES = (
 
 CMS_LANGUAGE_CONF = {
     'en': ['en'],
-    'de': ['de'],
-    'ru': ['ru'],
+    'de': ['en'],
+    'ru': ['en'],
 }
 
 
