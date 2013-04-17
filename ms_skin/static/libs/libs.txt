@@ -175,6 +175,8 @@ lib.contact.value = {$site.contact}
 lib.logo = TEXT
 lib.logo.value = <a class="brand" href="./?L={$config.sys_language_uid}">{$site.copyright}</a>
 
+#######
+
 
 
 lib.gridelements.defaultGridSetup { // stdWrap functions being applied to each element
@@ -188,10 +190,6 @@ lib.gridelements.defaultGridSetup { // stdWrap functions being applied to each e
                 # And you can reset the register later on
                 # 30 = RESTORE_REGISTER
             }
-        }
-        2 < .default
-        2 {
-
         }
     }
     # if you want to provide your own templating, just insert a cObject here
@@ -238,6 +236,7 @@ tt_content.shortcut.20 {
     }
 }
 
+plugin.tx_gridelements_pi1 >
 tt_content.gridelements_pi1 >
 tt_content.gridelements_pi1 = COA
 tt_content.gridelements_pi1 {
@@ -249,13 +248,12 @@ tt_content.gridelements_pi1 {
             userFunc = tx_gridelements_view->main
             setup {
                 default < lib.gridelements.defaultGridSetup
-                123 < .default
-
             }
         }
     }
 }
 
+/*
 tt_content.gridelements_pi1.20.10.setup {
   1 < lib.gridelements.defaultGridSetup
   1 {
@@ -290,3 +288,5 @@ tt_content.gridelements_pi1.20.10.setup {
     }
   }
 }
+
+*/
