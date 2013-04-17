@@ -23,13 +23,14 @@
 			<div class="content">
 				<div class="wrap">
 					<f:cObject typoscriptObjectPath="lib.field_intro" />
+					{content->f:format.row()}
 				</div>
 			</div><!-- / b-content -->
 		</div>
 	</section><!-- / b-pagetitle -->
 	<section class="content">
 		<f:cObject typoscriptObjectPath="lib.field_content" />
-		{content -> f:format.row()}
+		{content->f:format.row()}
 	</section>
 	<div class="l-footerpush"></div>
 </div><!--/ .l-wrapper -->
