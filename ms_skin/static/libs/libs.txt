@@ -2,11 +2,11 @@
 #content fields
 lib.field_intro < styles.content.get
 lib.field_intro.select.where = colPos = 0
-#lib.field_content.select.languageField = sys_language_uid
+lib.field_content.select.languageField = sys_language_uid
 
 lib.field_content < styles.content.get
 lib.field_content.select.where = colPos = 1
-#lib.field_content.select.languageField = sys_language_uid
+lib.field_content.select.languageField = sys_language_uid
 
 #grid storage
 plugin.tx_dce.persistence.storagePid = {$site.storagePid}
