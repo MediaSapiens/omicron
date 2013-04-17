@@ -25,7 +25,7 @@ page.10 {
     key.data = levelfield:-1, backend_layout_next_level, slide
     key.override.field = backend_layout
     # default template file
-    default = HTML
+    default = TEXT
     default.value = {$skin_path}layout/sys-templates/1col.html
     # template file for backend-layout with ID 2
     #2 = TEXT
