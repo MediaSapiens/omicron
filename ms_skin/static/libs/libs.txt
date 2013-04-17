@@ -11,12 +11,6 @@ lib.field_content.select.languageField = sys_language_uid
 #grid storage
 plugin.tx_dce.persistence.storagePid = {$site.storagePid}
 
-# Disable ce wrapping (for dce)
-tt_content.stdWrap.innerWrap.cObject.default.stdWrap.if {
-        isInList.field = CType
-        negate = 1
-}
-
 lib.mainNavi = HMENU
 lib.mainNavi{
     entryLevel = 0
