@@ -30,9 +30,12 @@ lib.stdheader {
   10.6.dataWrap = |
   stdWrap.dataWrap = |
 }
+
+
 # typo3 4.7 - no <header> around default header
 lib.stdheader.stdWrap.dataWrap.override = |
 
+/*
 # remove the default wrap for all content elements
 tt_content.stdWrap.innerWrap.cObject.default >
 
@@ -53,5 +56,6 @@ tt_content.menu.stdWrap.dataWrap = <article id="c{field:uid}">|</article>
 tt_content.div.wrap >
 
 # this is some stupid typo3-behaviour. fix upscaling of images by removing width/height
-tt_content.image.20.1.imageLinkWrap.height >
-tt_content.image.20.1.imageLinkWrap.width >
+#tt_content.image.20.1.imageLinkWrap.height >
+#tt_content.image.20.1.imageLinkWrap.width >
+*/
