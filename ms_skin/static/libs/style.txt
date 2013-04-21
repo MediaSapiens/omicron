@@ -6,12 +6,12 @@ lib.parseFunc_RTE {
   # Set default class for ul from rte for easier custom styling
   externalBlocks := addToList(ul,li)
   externalBlocks {
-    ul.stripNL = 1
-    ul.callRecursive = 1
-    ul.callRecursive.tagStdWrap.HTMLparser = 1
-    ul.callRecursive.tagStdWrap.HTMLparser.tags.ul {
-      fixAttrib.class.default = contentlist
-    }
+    #ul.stripNL = 1
+    #ul.callRecursive = 1
+    #ul.callRecursive.tagStdWrap.HTMLparser = 1
+    #ul.callRecursive.tagStdWrap.HTMLparser.tags.ul {
+    #  fixAttrib.class.default = contentlist
+    #}
   }
 }
 
