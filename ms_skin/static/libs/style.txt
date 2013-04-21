@@ -41,6 +41,7 @@ lib.stdheader.stdWrap.dataWrap.override = |
 # wrap an article element around the default typo3 elements
 # this way gridelements and plugins are not wrapped with article -- this will be done manually
 # with typoscript or in the corresponding templates
+/*
 tt_content.text.stdWrap.dataWrap = <article id="c{field:uid}">|</article>
 tt_content.textpic.stdWrap.dataWrap = <article id="c{field:uid}">|</article>
 tt_content.image.stdWrap.dataWrap = <article id="c{field:uid}">|</article>
@@ -50,6 +51,18 @@ tt_content.uploads.stdWrap.dataWrap = <article id="c{field:uid}">|</article>
 tt_content.multimedia.stdWrap.dataWrap = <article id="c{field:uid}">|</article>
 tt_content.media.stdWrap.dataWrap = <article id="c{field:uid}">|</article>
 tt_content.menu.stdWrap.dataWrap = <article id="c{field:uid}">|</article>
+*/
+
+tt_content.text.stdWrap.dataWrap = |
+tt_content.textpic.stdWrap.dataWrap = |
+tt_content.image.stdWrap.dataWrap = |
+tt_content.bullets.stdWrap.dataWrap = |
+tt_content.table.stdWrap.dataWrap = |
+tt_content.uploads.stdWrap.dataWrap = |
+tt_content.multimedia.stdWrap.dataWrap = |
+tt_content.media.stdWrap.dataWrap = |
+tt_content.menu.stdWrap.dataWrap = |
+
 
 # remove the wrapper from hr-divider
 tt_content.div.wrap >
