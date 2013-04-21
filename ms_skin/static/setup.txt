@@ -13,8 +13,8 @@ config {
 }
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:ms_skin/static/libs/style.txt">
-
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:ms_skin/static/libs/libs.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ms_skin/static/libs/extensions.txt">
 
 page = PAGE
 page.10 = FLUIDTEMPLATE

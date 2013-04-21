@@ -65,6 +65,16 @@ site{
 	storagePid = 3
 	footerNavi = 4
 	copyright = Omicron
-	contact = 040 / 09009998
+	contact =
+	siteURL = http://omicron-med.de/
 
 }
+
+
+#local - dev
+
+
+
+[IP = 127.0.0.1][globalString = IENV:HTTP_HOST = localhost]
+    site.siteURL = http://localhost:9000/
+[end]
