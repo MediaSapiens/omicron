@@ -1,13 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 58
-/TYPO3v4/CoreProjects/!svn/ver/4571/gridelements/trunk/lib
-END
-wrapperForT3libBeFunc.php
-K 25
-svn:wc:ra_dav:version-url
-V 84
-/TYPO3v4/CoreProjects/!svn/ver/4567/gridelements/trunk/lib/wrapperForT3libBeFunc.php
+/TYPO3v4/CoreProjects/!svn/ver/4576/gridelements/trunk/lib
 END
 class.tx_gridelements_cmoptions.php
 K 25
@@ -80,4 +74,10 @@ K 25
 svn:wc:ra_dav:version-url
 V 97
 /TYPO3v4/CoreProjects/!svn/ver/4483/gridelements/trunk/lib/wizard_gridelements_backend_layout.php
+END
+wrapperForT3libBeFunc.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/TYPO3v4/CoreProjects/!svn/ver/4567/gridelements/trunk/lib/wrapperForT3libBeFunc.php
 END

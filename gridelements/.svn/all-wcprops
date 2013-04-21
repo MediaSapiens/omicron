@@ -1,7 +1,25 @@
 K 25
 svn:wc:ra_dav:version-url
 V 54
-/TYPO3v4/CoreProjects/!svn/ver/4574/gridelements/trunk
+/TYPO3v4/CoreProjects/!svn/ver/4577/gridelements/trunk
+END
+ext_tables.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/TYPO3v4/CoreProjects/!svn/ver/4530/gridelements/trunk/ext_tables.php
+END
+locallang_db.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/TYPO3v4/CoreProjects/!svn/ver/4486/gridelements/trunk/locallang_db.xml
+END
+ext_localconf.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/TYPO3v4/CoreProjects/!svn/ver/4533/gridelements/trunk/ext_localconf.php
 END
 ChangeLog
 K 25
@@ -56,22 +74,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 71
 /TYPO3v4/CoreProjects/!svn/ver/4566/gridelements/trunk/ext_autoload.php
-END
-ext_tables.php
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/TYPO3v4/CoreProjects/!svn/ver/4530/gridelements/trunk/ext_tables.php
-END
-locallang_db.xml
-K 25
-svn:wc:ra_dav:version-url
-V 71
-/TYPO3v4/CoreProjects/!svn/ver/4486/gridelements/trunk/locallang_db.xml
-END
-ext_localconf.php
-K 25
-svn:wc:ra_dav:version-url
-V 72
-/TYPO3v4/CoreProjects/!svn/ver/4533/gridelements/trunk/ext_localconf.php
 END

@@ -1,7 +1,7 @@
 10
 
 dir
-4574
+4577
 https://svn.typo3.org/TYPO3v4/CoreProjects/gridelements/trunk/res
 https://svn.typo3.org/TYPO3v4/CoreProjects
 
@@ -26,6 +26,9 @@ cybercraft
 
 743128fe-103e-dd11-99c4-001b210b3e58
 
+flexform
+dir
+
 css
 dir
 
@@ -33,8 +36,5 @@ img
 dir
 
 js
-dir
-
-flexform
 dir
 

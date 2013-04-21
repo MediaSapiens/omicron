@@ -3,6 +3,12 @@ svn:wc:ra_dav:version-url
 V 60
 /TYPO3v4/CoreProjects/!svn/ver/4573/gridelements/trunk/hooks
 END
+class.tx_gridelements_db_listhook.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/TYPO3v4/CoreProjects/!svn/ver/4482/gridelements/trunk/hooks/class.tx_gridelements_db_listhook.php
+END
 class.tx_gridelements_db_list_extrahook.php
 K 25
 svn:wc:ra_dav:version-url
@@ -14,10 +20,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 103
 /TYPO3v4/CoreProjects/!svn/ver/4573/gridelements/trunk/hooks/class.tx_gridelements_pagerendererhook.php
-END
-class.tx_gridelements_db_listhook.php
-K 25
-svn:wc:ra_dav:version-url
-V 98
-/TYPO3v4/CoreProjects/!svn/ver/4482/gridelements/trunk/hooks/class.tx_gridelements_db_listhook.php
 END

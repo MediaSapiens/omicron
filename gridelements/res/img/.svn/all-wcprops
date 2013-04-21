@@ -3,6 +3,42 @@ svn:wc:ra_dav:version-url
 V 62
 /TYPO3v4/CoreProjects/!svn/ver/4516/gridelements/trunk/res/img
 END
+t3grid-tableleft.png
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/TYPO3v4/CoreProjects/!svn/ver/4249/gridelements/trunk/res/img/t3grid-tableleft.png
+END
+reference.png
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/TYPO3v4/CoreProjects/!svn/ver/4513/gridelements/trunk/res/img/reference.png
+END
+paste reference to.png
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/TYPO3v4/CoreProjects/!svn/ver/4513/gridelements/trunk/res/img/paste%20reference%20to.png
+END
+t3grid-layer-icon-close.png
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/TYPO3v4/CoreProjects/!svn/ver/4249/gridelements/trunk/res/img/t3grid-layer-icon-close.png
+END
+t3grid-editor-up-inactive.png
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/TYPO3v4/CoreProjects/!svn/ver/4249/gridelements/trunk/res/img/t3grid-editor-up-inactive.png
+END
+t3grid-editor-up.png
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/TYPO3v4/CoreProjects/!svn/ver/4249/gridelements/trunk/res/img/t3grid-editor-up.png
+END
 add copy (from another page).png
 K 25
 svn:wc:ra_dav:version-url
@@ -110,40 +146,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 95
 /TYPO3v4/CoreProjects/!svn/ver/4249/gridelements/trunk/res/img/t3grid-editor-right-inactive.png
-END
-t3grid-tableleft.png
-K 25
-svn:wc:ra_dav:version-url
-V 83
-/TYPO3v4/CoreProjects/!svn/ver/4249/gridelements/trunk/res/img/t3grid-tableleft.png
-END
-reference.png
-K 25
-svn:wc:ra_dav:version-url
-V 76
-/TYPO3v4/CoreProjects/!svn/ver/4513/gridelements/trunk/res/img/reference.png
-END
-paste reference to.png
-K 25
-svn:wc:ra_dav:version-url
-V 89
-/TYPO3v4/CoreProjects/!svn/ver/4513/gridelements/trunk/res/img/paste%20reference%20to.png
-END
-t3grid-layer-icon-close.png
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/TYPO3v4/CoreProjects/!svn/ver/4249/gridelements/trunk/res/img/t3grid-layer-icon-close.png
-END
-t3grid-editor-up-inactive.png
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/TYPO3v4/CoreProjects/!svn/ver/4249/gridelements/trunk/res/img/t3grid-editor-up-inactive.png
-END
-t3grid-editor-up.png
-K 25
-svn:wc:ra_dav:version-url
-V 83
-/TYPO3v4/CoreProjects/!svn/ver/4249/gridelements/trunk/res/img/t3grid-editor-up.png
 END

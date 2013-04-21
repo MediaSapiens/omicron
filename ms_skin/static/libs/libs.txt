@@ -11,6 +11,8 @@ lib.field_content.select.where = colPos = 1
 #2 col tmpl
 lib.field_leftCol < lib.field_intro
 lib.field_rightCol < lib.field_content
+lib.field_hero < lib.field_intro
+lib.field_hero.select.where = colPos = 3
 
 #grid storage
 plugin.tx_dce.persistence.storagePid = {$site.storagePid}
@@ -183,37 +185,22 @@ lib.logo.value = <a class="brand" href="./?L={$config.sys_language_uid}">{$site.
 # gce elements
 #######
 
-
 tt_content.gridelements_pi1.20.10.setup {
-  3 < lib.gridelements.defaultGridSetup
-  3 {
+  2 < lib.gridelements.defaultGridSetup
+  2 {
     prepend = COA
     prepend {
-      10 = TEXT
+      10 = IMAGE
       10 {
-        data = field:flexform_headline
-        typolink.parameter.data = field:flexform_link
-        wrap = <h3>|</h3>
-      }
-      20 = IMAGE
-      20 {
       	file.import.data = field:flexform_image
       	file.width = 200
       	file.height = 133c
       }
-      30 = COA
-      30 {
-        10 = TEXT
-        10 {
-          data = field:flexform_text
-          crop = 150 | &nbsp; | 1
-        }
-        20 = TEXT
-        20 {
-          value = &nbsp;more...
-          typolink.parameter.data = field:flexform_link
-        }
-        wrap = <p>|</p>
+      20 = TEXT
+      20 {
+        data = field:flexform_headline
+        #typolink.parameter.data = field:flexform_link
+        wrap =<div class="container"><div class="content"><div class="wrap"><h2>|</h3></div></div></div>
       }
     }
   }

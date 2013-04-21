@@ -3,12 +3,6 @@ svn:wc:ra_dav:version-url
 V 58
 /TYPO3v4/CoreProjects/!svn/ver/4563/gridelements/trunk/doc
 END
-manual.sxw
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/TYPO3v4/CoreProjects/!svn/ver/4563/gridelements/trunk/doc/manual.sxw
-END
 manual.pdf
 K 25
 svn:wc:ra_dav:version-url
@@ -26,4 +20,10 @@ K 25
 svn:wc:ra_dav:version-url
 V 74
 /TYPO3v4/CoreProjects/!svn/ver/4241/gridelements/trunk/doc/wizard_form.dat
+END
+manual.sxw
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/TYPO3v4/CoreProjects/!svn/ver/4563/gridelements/trunk/doc/manual.sxw
 END
