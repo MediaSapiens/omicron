@@ -189,18 +189,22 @@ tt_content.gridelements_pi1.20.10.setup {
   2 < lib.gridelements.defaultGridSetup
   2 {
     prepend = COA
+
     prepend {
       10 = IMAGE
       10 {
+        required=1
+        file.import=uploads/tx_gridelements/
       	file.import.data = field:flexform_image
-      	file.width = 200
-      	file.height = 133c
+      	#file.width = 1400
+      	#file.height = 200c
+      	params = class="cover"
       }
       20 = TEXT
       20 {
         data = field:flexform_headline
         #typolink.parameter.data = field:flexform_link
-        wrap =<div class="container"><div class="content"><div class="wrap"><h2>|</h3></div></div></div>
+        wrap =<div class="container"><div class="content"><div class="wrap"><h2>|</h2></div></div></div>
       }
     }
   }
