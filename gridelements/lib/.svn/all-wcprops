@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 58
-/TYPO3v4/CoreProjects/!svn/ver/4576/gridelements/trunk/lib
+/TYPO3v4/CoreProjects/!svn/ver/4590/gridelements/trunk/lib
 END
 class.tx_gridelements_cmoptions.php
 K 25
@@ -13,13 +13,7 @@ class.tx_gridelements_drawitemhook.php
 K 25
 svn:wc:ra_dav:version-url
 V 97
-/TYPO3v4/CoreProjects/!svn/ver/4541/gridelements/trunk/lib/class.tx_gridelements_drawitemhook.php
-END
-getclipboarditem.php
-K 25
-svn:wc:ra_dav:version-url
-V 79
-/TYPO3v4/CoreProjects/!svn/ver/4394/gridelements/trunk/lib/getclipboarditem.php
+/TYPO3v4/CoreProjects/!svn/ver/4582/gridelements/trunk/lib/class.tx_gridelements_drawitemhook.php
 END
 class.tx_gridelements_layoutsetup.php
 K 25
@@ -61,7 +55,7 @@ class.tx_gridelements_wizarditemshook.php
 K 25
 svn:wc:ra_dav:version-url
 V 100
-/TYPO3v4/CoreProjects/!svn/ver/4571/gridelements/trunk/lib/class.tx_gridelements_wizarditemshook.php
+/TYPO3v4/CoreProjects/!svn/ver/4588/gridelements/trunk/lib/class.tx_gridelements_wizarditemshook.php
 END
 conf.php
 K 25

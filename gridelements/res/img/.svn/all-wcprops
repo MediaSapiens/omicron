@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 62
-/TYPO3v4/CoreProjects/!svn/ver/4516/gridelements/trunk/res/img
+/TYPO3v4/CoreProjects/!svn/ver/4579/gridelements/trunk/res/img
 END
 t3grid-tableleft.png
 K 25
@@ -50,6 +50,12 @@ K 25
 svn:wc:ra_dav:version-url
 V 79
 /TYPO3v4/CoreProjects/!svn/ver/4513/gridelements/trunk/res/img/paste%20copy.png
+END
+clear.gif
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/TYPO3v4/CoreProjects/!svn/ver/4579/gridelements/trunk/res/img/clear.gif
 END
 t3grid-editor-left.png
 K 25

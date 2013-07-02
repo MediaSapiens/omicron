@@ -90,12 +90,25 @@ class tx_gridelements_tcemain_processCmdmap extends tx_gridelements_tcemain_abst
 						$overrideArray['tx_gridelements_container'] = abs($valueArray[0]);
 						$overrideArray['tx_gridelements_columns'] = intval($valueArray[1]);
 					}
+					if(intval($valueArray[0]) < 0) {
+						$targetTable = 'tt_content';
+					} else {
+						$targetTable = 'pages';
+					}
+					$targetRecord = t3lib_BEfunc::getRecordWSOL($targetTable, abs($valueArray[0]), 'sys_language_uid');
+					$overrideArray['sys_language_uid'] = $targetRecord['sys_language_uid'];
 					$this->getTceMain()->copyRecord($table, $id, intval($valueArray[0]), 1, $overrideArray);
 					$this->doGridContainerUpdate($containerUpdateArray);
 				} else {
+					if(intval($value) < 0) {
+						$targetTable = 'tt_content';
+					} else {
+						$targetTable = 'pages';
+					}
+					$targetRecord = t3lib_BEfunc::getRecordWSOL($targetTable, abs($value), 'sys_language_uid,tx_gridelements_container');
+					$overrideArray['sys_language_uid'] = $targetRecord['sys_language_uid'];
 					$this->getTceMain()->copyRecord($table, $id, $value, 1, $overrideArray);
 					if(intval($value) < 0) {
-						$targetRecord = t3lib_BEfunc::getRecordWSOL('tt_content', -$value, 'tx_gridelements_container');
 						if($targetRecord['tx_gridelements_container'] > 0) {
 							$containerUpdateArray[$targetRecord['tx_gridelements_container']] = 1;
 							$this->doGridContainerUpdate($containerUpdateArray);
@@ -103,7 +116,26 @@ class tx_gridelements_tcemain_processCmdmap extends tx_gridelements_tcemain_abst
 					}
 				}
 			} else {
-				$this->getTceMain()->copyRecord($table, $id, $value, 1);
+				if($value > 0) {
+					$overrideArray['tx_gridelements_container'] = 0;
+					$overrideArray['tx_gridelements_columns'] = 0;
+					$overrideArray['colPos'] = 0;
+					$overrideArray['sorting'] = 0;
+				}
+				if(intval($value) < 0) {
+					$targetTable = 'tt_content';
+				} else {
+					$targetTable = 'pages';
+				}
+				$targetRecord = t3lib_BEfunc::getRecordWSOL($targetTable, abs($value), 'sys_language_uid,tx_gridelements_container');
+				$overrideArray['sys_language_uid'] = $targetRecord['sys_language_uid'];
+				$this->getTceMain()->copyRecord($table, $id, $value, 1, $overrideArray);
+				if(intval($value) < 0) {
+					if($targetRecord['tx_gridelements_container'] > 0) {
+						$containerUpdateArray[$targetRecord['tx_gridelements_container']] = 1;
+						$this->doGridContainerUpdate($containerUpdateArray);
+					}
+				}
 			}
 
 			$commandIsProcessed = true;

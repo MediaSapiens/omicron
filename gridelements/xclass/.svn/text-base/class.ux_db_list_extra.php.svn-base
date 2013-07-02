@@ -702,10 +702,18 @@ class ux_localRecordList extends localRecordList {
 
 			// Show copy/cut icons:
 			$isSel = (string)$this->clipObj->isSelected($table,$row['uid']);
-			$cells['copy'] = $isL10nOverlay ? $this->spaceIcon : '<a href="#" onclick="' . htmlspecialchars('return jumpSelf(\'' . $this->clipObj->selUrlDB($table, $row['uid'], 1, ($isSel=='copy'), array('returnUrl'=>'')) . '\');') . '" title="'.$GLOBALS['LANG']->sL('LLL:EXT:lang/locallang_core.php:cm.copy', TRUE) . '">' .
+			if (stripos(t3lib_div::getIndpEnv('SCRIPT_NAME'), 'ajax') === false) {
+				$copyUrl = $this->clipObj->selUrlDB($table, $row['uid'], 1, ($isSel=='copy'), array('returnUrl'=>''));
+				$cutUrl = $this->clipObj->selUrlDB($table, $row['uid'], 0, ($isSel == 'cut'), array('returnUrl'=>''));
+			} else {
+				$copyUrl = $this->selUrlDB($table, $row['uid'], $row['pid'], 1, ($isSel=='copy'));
+				$cutUrl = $this->selUrlDB($table, $row['uid'], $row['pid'], 0, ($isSel == 'cut'));
+			}
+
+			$cells['copy'] = $isL10nOverlay ? $this->spaceIcon : '<a href="#" onclick="' . htmlspecialchars('return jumpSelf(\'' . $copyUrl . '\');') . '" title="'.$GLOBALS['LANG']->sL('LLL:EXT:lang/locallang_core.php:cm.copy', TRUE) . '">' .
 				((!$isSel=='copy') ? t3lib_iconWorks::getSpriteIcon('actions-edit-copy') : t3lib_iconWorks::getSpriteIcon('actions-edit-copy-release')) .
 				'</a>';
-			$cells['cut'] = $isL10nOverlay ? $this->spaceIcon : '<a href="#" onclick="' . htmlspecialchars('return jumpSelf(\'' . $this->clipObj->selUrlDB($table, $row['uid'], 0, ($isSel == 'cut'), array('returnUrl'=>'')) . '\');') . '" title="' . $GLOBALS['LANG']->sL('LLL:EXT:lang/locallang_core.php:cm.cut', TRUE) . '">' .
+			$cells['cut'] = $isL10nOverlay ? $this->spaceIcon : '<a href="#" onclick="' . htmlspecialchars('return jumpSelf(\'' . $cutUrl . '\');') . '" title="' . $GLOBALS['LANG']->sL('LLL:EXT:lang/locallang_core.php:cm.cut', TRUE) . '">' .
 				((!$isSel=='cut') ? t3lib_iconWorks::getSpriteIcon('actions-edit-cut') : t3lib_iconWorks::getSpriteIcon('actions-edit-cut-release')) .
 				'</a>';
 
@@ -1084,6 +1092,30 @@ class ux_localRecordList extends localRecordList {
 			t3lib_BEfunc::getUrlToken('tceAction');
 		return $rU;
 	}
+
+	/**
+	 * Returns the select-url for database elements
+	 *
+	 * @param	string		Table name
+	 * @param	integer		Uid of record
+	 * @param	integer		Pid of record
+	 * @param	boolean		If set, copymode will be enabled
+	 * @param	boolean		If set, the link will deselect, otherwise select.
+	 * @param	array		The base array of GET vars to be sent in addition. Notice that current GET vars WILL automatically be included.
+	 * @return	string		URL linking to the current script but with the CB array set to select the element with table/uid
+	 */
+	function selUrlDB($table, $uid, $pid, $copy = 0, $deselect = 0, $baseArray = array()) {
+		$CB = array('el' => array(rawurlencode($table . '|' . $uid) => $deselect ? 0 : 1));
+		if ($copy) {
+			$CB['setCopyMode'] = 1;
+		}
+		$baseArray['M'] = web_list;
+		$baseArray['id'] = $pid;
+		$baseArray['CB'] = $CB;
+		unset($baseArray['returnUrl']);
+		return t3lib_div::linkThisUrl('mod.php', $baseArray);
+	}
+
 }
 
 if (defined('TYPO3_MODE') && isset($GLOBALS['TYPO3_CONF_VARS'][TYPO3_MODE]['XCLASS']['ext/gridelements/xclass/class.ux_db_list_extra.php'])) {

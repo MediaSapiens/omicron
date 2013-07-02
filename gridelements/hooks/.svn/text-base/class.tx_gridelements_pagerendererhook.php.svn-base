@@ -144,7 +144,12 @@ class tx_gridelements_pagerendererhook {
 								if($col['allowed']){
 									$allowed = t3lib_div::trimExplode(',', $col['allowed'], 1);
 									foreach($allowed as $ctype){
-										$classes .= 't3-allow-' . $ctype . ' ';
+										if($ctype == '*') {
+											$classes = 't3-allow-all';
+											break;
+										} else {
+											$classes .= 't3-allow-' . $ctype . ' ';
+										}
 									}
 								} else {
 									$classes = 't3-allow-all';

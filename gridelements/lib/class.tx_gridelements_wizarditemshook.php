@@ -72,26 +72,28 @@ class tx_gridelements_wizardItemsHook implements cms_newContentElementWizardsHoo
 	 * @return void
 	 */
 	public function manipulateWizardItems(&$wizardItems, &$parentObject) {
-		$pageID = $parentObject->pageinfo['uid'];
-		$this->init($pageID);
+		if(!t3lib_div::inList($GLOBALS['BE_USER']->groupData['explicit_allowdeny'], 'tt_content:CType:gridelements_pi1:DENY')) {
+			$pageID = $parentObject->pageinfo['uid'];
+			$this->init($pageID);
 
-		$container = intval(t3lib_div::_GP('tx_gridelements_container'));
-		$column = intval(t3lib_div::_GP('tx_gridelements_columns'));
-		$allowed = t3lib_div::trimExplode(',', t3lib_div::_GP('tx_gridelements_allowed'), 1);
+			$container = intval(t3lib_div::_GP('tx_gridelements_container'));
+			$column = intval(t3lib_div::_GP('tx_gridelements_columns'));
+			$allowed = t3lib_div::trimExplode(',', t3lib_div::_GP('tx_gridelements_allowed'), 1);
 
-		$this->removeDisallowedWizardItems($allowed, $wizardItems);
+			$this->removeDisallowedWizardItems($allowed, $wizardItems);
 
-		if(empty($allowed) || in_array('gridelements_pi1', $allowed)){
+			if(empty($allowed) || in_array('gridelements_pi1', $allowed) || in_array('*', $allowed)){
 
-			$excludeLayouts = $this->getExcludeLayouts($container, $parentObject);
+				$excludeLayouts = $this->getExcludeLayouts($container, $parentObject);
 
-			$gridItems = $this->layoutSetup->getLayoutWizardItems($parentObject->colPos, $excludeLayouts);
-			$this->addGridItemsToWizard($gridItems, $wizardItems);
+				$gridItems = $this->layoutSetup->getLayoutWizardItems($parentObject->colPos, $excludeLayouts);
+				$this->addGridItemsToWizard($gridItems, $wizardItems);
+			}
+
+			$this->addGridValuesToWizardItems($wizardItems, $container, $column);
+
+			$this->removeEmptyHeadersFromWizard($wizardItems);
 		}
-
-		$this->addGridValuesToWizardItems($wizardItems, $container, $column);
-
-		$this->removeEmptyHeadersFromWizard($wizardItems);
 	}
 
 	/**
@@ -125,10 +127,12 @@ class tx_gridelements_wizardItemsHook implements cms_newContentElementWizardsHoo
 	 * @return void
 	 */
 	public function removeDisallowedWizardItems($allowed, &$wizardItems) {
-		foreach($wizardItems as $key => $wizardItem) {
-			if (!$wizardItems[$key]['header']) {
-				if (count($allowed) && !in_array($wizardItems[$key]['tt_content_defValues']['CType'], $allowed)){
-					unset($wizardItems[$key]);
+		if(!in_array('*', $allowed)) {
+			foreach($wizardItems as $key => $wizardItem) {
+				if (!$wizardItems[$key]['header']) {
+						if (count($allowed) && !in_array($wizardItems[$key]['tt_content_defValues']['CType'], $allowed)){
+							unset($wizardItems[$key]);
+						}
 				}
 			}
 		}
@@ -235,6 +239,7 @@ class tx_gridelements_wizardItemsHook implements cms_newContentElementWizardsHoo
 					$wizardItems[$key]['params'] .= '&defVals[tt_content][tx_gridelements_container]=' . $container;
 				}
 				if($column != 0) {
+					$wizardItems[$key]['tt_content_defValues']['tx_gridelements_columns'] = $column;
 					$wizardItems[$key]['tt_content_defValues']['tx_gridelements_columns'] = $column;
 					$wizardItems[$key]['params'] .= '&defVals[tt_content][tx_gridelements_columns]=' . $column;
 				}
